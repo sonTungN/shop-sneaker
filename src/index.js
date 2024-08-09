@@ -5,6 +5,10 @@ const { engine } = require("express-handlebars");
 const app = express();
 const port = 3000;
 
+// STATIC FILES
+app.use(express.static(path.join(__dirname, "public")));
+
+// EXPRESS HANDLEBARS
 app.engine(".hbs", engine({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", path.join(__dirname, "/resources/views"));

@@ -1,0 +1,26 @@
+{
+  "name": "shop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonTungN/shop-sneaker.git"
+  },
+  "author": "Tung Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sonTungN/shop-sneaker/issues"
+  },
+  "homepage": "https://github.com/sonTungN/shop-sneaker#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

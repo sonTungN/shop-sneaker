@@ -1,3 +1,5 @@
+const User = require("../model/User");
+
 class UserController {
   // [GET] /sign-up
   create(req, res, next) {
@@ -6,6 +8,15 @@ class UserController {
       title: "Sign Up",
       styles: ["sign-up.css"],
     });
+  }
+
+  async store(req, res, next) {
+    // res.json(req.body);
+    const user = new User(req.body);
+    await user
+      .save()
+      .then(() => res.redirect("/home"))
+      .catch(next);
   }
 }
 

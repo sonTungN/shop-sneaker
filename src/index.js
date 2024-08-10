@@ -7,8 +7,14 @@ const port = 3000;
 
 const route = require("./routes/index");
 const db = require("./config/db");
+
 // STATIC FILES
 app.use(express.static(path.join(__dirname, "public")));
+
+// For parsing application/x-www-form-urlencoded
+app.use(express.urlencoded({ extended: true }));
+// For parsing application/json
+app.use(express.json());
 
 // DATABASE CONNECTION
 db.connect();

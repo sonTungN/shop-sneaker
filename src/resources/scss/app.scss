@@ -189,7 +189,7 @@ a {
   font-size: 1.6rem;
   line-height: 1.88;
   text-align: center;
-  color: var(--description);
+  color: $description-color;
 }
 
 .stats .row-qty {
@@ -208,7 +208,7 @@ a {
   margin-top: 24px;
   font-weight: 500;
   font-size: 1.8rem;
-  color: var(--description);
+  color: $description-color;
 }
 
 /* PRODUCTS */
@@ -297,7 +297,7 @@ a {
   align-items: center;
   font-weight: 600;
   font-size: 1.8rem;
-  color: var(--heading);
+  color: $heading-color;
 }
 
 .products .link:hover {
@@ -330,7 +330,7 @@ a {
   font-weight: 600;
   font-size: 3.5rem;
   line-height: 1.5;
-  color: var(--heading);
+  color: $heading-color;
 }
 
 .subscription .info .desc {
@@ -339,7 +339,7 @@ a {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.88;
-  color: var(--description);
+  color: $description-color;
   opacity: 0.75;
 }
 

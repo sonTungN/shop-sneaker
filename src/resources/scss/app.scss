@@ -1,12 +1,7 @@
+@import "variables";
+
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --primary: rgba(254, 250, 240, 1);
-  --heading: #000336;
-  --description: #5a6473;
-  --line-clamp: 1;
 }
 
 html {
@@ -16,7 +11,7 @@ html {
 body {
   font-family: Poppins, sans-serif;
   font-size: 1.6rem;
-  background-color: var(--primary);
+  background-color: $primary-color;
 }
 
 /* COMMON */
@@ -33,7 +28,7 @@ a {
 .btn {
   display: inline-block;
   min-width: 100px;
-  background: var(--heading);
+  background: $heading-color;
   padding: 13px 16px;
   border-radius: 8px;
   font-weight: 500;
@@ -42,80 +37,10 @@ a {
   color: #ffffff;
   cursor: pointer;
   user-select: none;
-}
 
-.btn:hover {
-  opacity: 0.5;
-}
-
-.line-clamp {
-  display: -webkit-box;
-  -webkit-line-clamp: var(--line-clamp, 1);
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-/* HEADER */
-.header {
-  background-color: var(--primary);
-}
-
-.fixed-header {
-  position: sticky;
-  top: -10px;
-  z-index: 1;
-  border-bottom: 1px solid black;
-}
-
-.header .nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-}
-
-.header .nav-bar .logo-name {
-  width: 80px;
-  margin-left: -10px;
-}
-
-.header .nav-bar .list {
-  display: flex;
-  gap: 30px;
-}
-
-.header .nav-bar .list a {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--heading);
-  padding: 12px 8px;
-}
-
-.header .nav-bar .list .cart {
-  position: relative;
-}
-
-.header .nav-bar .list .cart-qty {
-  display: inline-block;
-  position: absolute;
-  top: 4px;
-  left: 90px;
-  padding: 3px 5px;
-  border-radius: 3px;
-  background-color: rgba(0, 3, 54, 0.2);
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-
-.header .action-link {
-  margin-right: 10px;
-  font-weight: 500;
-  font-size: 1.6rem;
-  color: var(--heading);
-}
-
-.header .nav-bar a:hover {
-  opacity: 0.5;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 /* HERO */
@@ -142,7 +67,7 @@ a {
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.78;
-  color: var(--description);
+  color: $description-color;
 }
 
 .hero-wrap .hero-cta {

@@ -2,11 +2,11 @@
   <div class="content">
     <div class="info-block">
       <div class="logo-block">
-        <img alt="Digg." class="logo" src="/assets/img/sneaker-logo.png" />
+        <img alt="Digg." class="logo" src="/assets/img/sneaker-logo.png"/>
         <img
-          alt="Digg."
-          class="logo-name"
-          src="/assets/img/sneaker-shoes.png"
+            alt="Digg."
+            class="logo-name"
+            src="/assets/img/sneaker-shoes.png"
         />
       </div>
       <h1 class="heading">
@@ -18,7 +18,7 @@
         shop the freshest kicks.
       </p>
 
-      <img alt="Sneaker" class="hero" src="/assets/img/sign-in-hero.png" />
+      <img alt="Sneaker" class="hero" src="/assets/img/sign-in-hero.png"/>
     </div>
 
     <div class="form-block">
@@ -29,20 +29,20 @@
 
       <!-- FORM -->
       <form
-        action="/sign-up/store"
-        autocomplete="off"
-        class="sign-up-form"
-        id="sign-up"
-        method="POST"
+          action="/sign-up/store"
+          autocomplete="off"
+          class="sign-up-form"
+          id="sign-up-form"
+          method="POST"
       >
         <div class="form-group">
           <label for="name">
             <input
-              class="form-control"
-              id="name"
-              name="name"
-              placeholder="Enter your full name"
-              type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                type="text"
             />
           </label>
           <span class="form-message"></span>
@@ -51,11 +51,11 @@
         <div class="form-group">
           <label for="email">
             <input
-              class="form-control"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                type="email"
             />
           </label>
           <span class="form-message"></span>
@@ -64,11 +64,11 @@
         <div class="form-group">
           <label for="password">
             <input
-              class="form-control"
-              id="password"
-              name="password"
-              placeholder="Enter your password"
-              type="text"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                type="password"
             />
           </label>
           <span class="form-message"></span>
@@ -78,10 +78,10 @@
         <div class="form-group">
           <label for="password-confirmation">
             <input
-              class="form-control"
-              id="password-confirmation"
-              placeholder="Confirm your password"
-              type="text"
+                class="form-control"
+                id="password-confirmation"
+                placeholder="Confirm your password"
+                type="password"
             />
           </label>
           <span class="form-message"></span>
@@ -99,3 +99,30 @@
     </div>
   </div>
 </div>
+
+<script src="/scripts/Validator.js"></script>
+<script>
+  Validator({
+    form: "#sign-up-form",
+    formGroupSelectors: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#name", "Please fill in your full name!"),
+      Validator.isEmail("#email"),
+      Validator.isRequired("#password"),
+      Validator.minLength("#password", 6),
+      Validator.isRequired("#password-confirmation"),
+      Validator.isConfirmed(
+          "#password-confirmation",
+          function () {
+            return document.querySelector("#sign-up-form #password").value;
+          },
+          "Password does not match!",
+      ),
+    ],
+    onSubmit: undefined,
+    // function(data) {
+    //   console.log(data);
+    // }
+  })
+</script>

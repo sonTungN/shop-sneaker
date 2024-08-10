@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {{> headTag}}
+  <!--  Stylesheet-->
+  <link href="/css/reset.css" rel="stylesheet"/>
+  {{#each styles}}
+    <link href="/css/{{this}}" rel="stylesheet"/>
+  {{/each}}
+  <title>{{title}}</title>
+</head>
+<body>
+  <main>
+    {{{body}}}
+  </main>
+</body>
+</html>

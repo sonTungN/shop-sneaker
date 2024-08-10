@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+input,
+button,
+label {
+  font-family: Poppins, sans-serif;
+  font-size: 1.6rem;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(254, 250, 240);
+}
+
+/* ========== COMMON ========== */
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.sign-up-block {
+  width: 1240px;
+  max-width: calc(100% - 48px);
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 210px);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.5);
+  /* ========== INFO BLOCK ========== */
+  /* ========== FORM BLOCK ========== */
+}
+.content .info-block {
+  position: relative;
+  width: 37%;
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(255, 228, 132);
+}
+.content .info-block .logo-name {
+  width: 80px;
+  margin-left: -10px;
+}
+.content .info-block .heading {
+  width: 410px;
+  margin-top: 20px;
+  font-weight: 400;
+  font-size: 3.7rem;
+  line-height: 1.19;
+  color: #000336;
+}
+.content .info-block .heading strong {
+  font-size: 4rem;
+}
+.content .info-block .desc {
+  width: 400px;
+  display: inline-block;
+  max-width: 530px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #5a6473;
+}
+.content .info-block .hero {
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  width: 350px;
+  transform: rotate(15deg);
+}
+.content .form-block {
+  width: 63%;
+  padding: 87px 120px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.content .form-block .sub-heading {
+  width: 100%;
+  font-weight: 500;
+  font-size: 3.5rem;
+  line-height: 1;
+  color: #000339;
+}
+.content .form-block .sub-desc {
+  width: 600px;
+  display: inline-block;
+  max-width: 100%;
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: #5a6473;
+}
+.content .form-block .sign-up-form {
+  margin-top: 25px;
+}
+.content .form-block .sign-up-form .form-control,
+.content .form-block .sign-up-form .submit-btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #000339;
+}
+.content .form-block .sign-up-form .submit-btn {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.5;
+  border-radius: 6px;
+  background-color: rgb(255, 228, 132);
+}
+.content .form-block .sign-up-form.disable .submit-btn {
+  opacity: 0.3;
+  pointer-events: none;
+}
+.content .form-block .form-group .form-message {
+  display: inline-block;
+  margin: 5px 0 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #f33a58;
+}
+.content .form-block .form-group.invalid .form-control {
+  color: #f33a58;
+  border-color: #f33a58;
+  border-width: 2px;
+}
+.content .form-block .form-group .form-control {
+  border-bottom: 1px solid black;
+}
+.content .form-block .sign-in-option {
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2;
+  text-align: center;
+  color: #000339;
+}
+.content .form-block .sign-in-option a {
+  display: inline-block;
+  margin-left: -5px;
+  font-weight: 700;
+  padding: 15px;
+  color: #000339;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/sign-up.scss%22,%22../../resources/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACE;EACA;;;AAGF;EACE;;;AAGF;AAAA;AAAA;AAAA;EAIE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA,kBCxBc;;;AD2BhB;AACA;EACE;;AAEA;EACE;EACA;;;AAIJ;EACE;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;AAEA;AA8CA;;AA7CA;EACE;EACA;EACA;EACA;EACA,kBC7Dc;;AD+Dd;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,OCtFc;;ADyFhB;EACE;EACA;EACA;EACA;EACA;;AAKJ;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,OC1Hc;;AD6HhB;EACE;;AAEA;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA,kBCnJU;;ADsJZ;EACE;EACA;;AAKF;EACE;EACA;EACA;EACA;EACA,OC9JM;;ADkKN;EACE,OCnKI;EDoKJ,cCpKI;EDqKJ;;AAIJ;EACE;;AAIJ;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA%22,%22file%22:%22sign-up.css%22%7D */

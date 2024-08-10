@@ -1,9 +1,9 @@
 class HomeController {
-  // [GET] /
+  // [GET] /home
   show(req, res) {
-    res.render("home", {
+    res.render("home/home", {
       title: "Sneaker Shop",
-      styles: ["app.css", "header.css"],
+      styles: ["app.css", "header.css", "footer.css"],
     });
   }
 }

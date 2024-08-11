@@ -27,17 +27,13 @@ body {
 a {
   text-decoration: none;
 }
-a:hover {
+a:hover,
+a button:hover {
   opacity: 0.5;
   cursor: pointer;
 }
 
-button:hover {
-  opacity: 0.5;
-  cursor: pointer;
-}
-
-.sign-up-block {
+.sign-in-block {
   width: 1240px;
   max-width: calc(100% - 48px);
   margin: 0 auto;
@@ -94,13 +90,12 @@ button:hover {
 }
 .content .form-block {
   width: 63%;
-  padding: 87px 120px;
-  background-color: #fff;
   display: flex;
   flex-direction: column;
+  padding: 120px;
+  background-color: #fff;
 }
 .content .form-block .sub-heading {
-  width: 100%;
   font-weight: 500;
   font-size: 3.5rem;
   line-height: 1;
@@ -116,11 +111,11 @@ button:hover {
   line-height: 1.5;
   color: #5a6473;
 }
-.content .form-block .sign-up-form {
-  margin-top: 25px;
+.content .form-block .sign-in-form {
+  margin-top: 30px;
 }
-.content .form-block .sign-up-form .form-control,
-.content .form-block .sign-up-form .submit-btn {
+.content .form-block .sign-in-form .form-control,
+.content .form-block .sign-in-form .submit-btn {
   width: 100%;
   border: none;
   outline: none;
@@ -129,14 +124,14 @@ button:hover {
   line-height: 2;
   color: #000339;
 }
-.content .form-block .sign-up-form .submit-btn {
+.content .form-block .sign-in-form .submit-btn {
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2.5;
   border-radius: 6px;
   background-color: rgb(255, 228, 132);
 }
-.content .form-block .sign-up-form:has(.invalid) .submit-btn {
+.content .form-block .sign-in-form:has(.invalid) .submit-btn {
   opacity: 0.3;
   pointer-events: none;
 }
@@ -150,19 +145,19 @@ button:hover {
 .content .form-block .form-group .form-control {
   border-bottom: 1px solid black;
 }
-.content .form-block .form-group.invalid .form-control {
+.content .form-block .form-group .form-control.invalid {
   color: #f33a58;
   border-color: #f33a58;
   border-width: 2px;
 }
-.content .form-block .sign-in-option {
+.content .form-block .sign-up-option {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 2;
   text-align: center;
   color: #000339;
 }
-.content .form-block .sign-in-option a {
+.content .form-block .sign-up-option a {
   display: inline-block;
   margin-left: -5px;
   font-weight: 700;
@@ -170,4 +165,4 @@ button:hover {
   color: #000339;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/sign-up.scss%22,%22../../resources/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACE;EACA;;;AAGF;EACE;;;AAGF;AAAA;AAAA;AAAA;EAIE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA,kBCxBc;;;AD2BhB;AACA;EACE;;AAEA;EACE;EACA;;;AAIJ;EACE;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;AAEA;AA8CA;;AA7CA;EACE;EACA;EACA;EACA;EACA,kBC7Dc;;AD+Dd;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,OCtFc;;ADyFhB;EACE;EACA;EACA;EACA;EACA;;AAKJ;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,OC1Hc;;AD6HhB;EACE;;AAEA;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA,kBCnJU;;ADsJZ;EACE;EACA;;AAKF;EACE;EACA;EACA;EACA;EACA,OC9JM;;ADiKR;EACE;;AAIA;EACE,OCvKI;EDwKJ,cCxKI;EDyKJ;;AAKN;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA%22,%22file%22:%22sign-up.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/sign-in.scss%22,%22../../resources/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACE;EACA;;;AAGF;EACE;;;AAGF;AAAA;AAAA;AAAA;EAIE;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA,kBCxBc;;;AD2BhB;AACA;EACE;;AAEA;AAAA;EAEE;EACA;;;AAIJ;EACE;EACA;EACA;;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;AAEA;AA8CA;;AA7CA;EACE;EACA;EACA;EACA;EACA,kBCzDc;;AD2Dd;EACE;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;;AAEA;EACE;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,OClFc;;ADqFhB;EACE;EACA;EACA;EACA;EACA;;AAKJ;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA,OCrHc;;ADwHhB;EACE;;AAEA;AAAA;EAEE;EACA;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA,kBC9IU;;ADiJZ;EACE;EACA;;AAKF;EACE;EACA;EACA;EACA;EACA,OCzJM;;AD4JR;EACE;;AAEA;EACE,OChKI;EDiKJ,cCjKI;EDkKJ;;AAKN;EACE;EACA;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA%22,%22file%22:%22sign-in.css%22%7D */

@@ -1,0 +1,99 @@
+<div class="sign-in-block">
+  <div class="content">
+    <div class="info-block">
+      <div class="logo-block">
+        <img
+            alt="Digg."
+            class="logo"
+            src="/assets/img/sneaker-logo.png"
+        />
+        <img
+            alt="Digg."
+            class="logo-name"
+            src="/assets/img/sneaker-shoes.png"
+        />
+      </div>
+      <h1 class="heading">
+        Step Into Style with <strong>Exclusive Sneakers!</strong>
+      </h1>
+      <p class="desc">
+        Join our community and elevate your footwear. Sign in now to
+        explore and shop the freshest kicks.
+      </p>
+
+      <img
+          alt="Sneaker"
+          class="hero"
+          src="/assets/img/sign-in-hero.png"
+      />
+    </div>
+
+    <div class="form-block">
+      <h2 class="sub-heading">Welcome Back,</h2>
+      <p class="sub-desc">
+        Join our community and step up your footwear game!
+      </p>
+
+      <!-- FORM -->
+      <form
+          action="/user/:id/validate"
+          autocomplete="off"
+          class="sign-in-form"
+          id="sign-in-form"
+          method="POST"
+      >
+        <div class="form-group">
+          <label for="email">
+            <input
+                autofocus
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Email"
+                type="email"
+            />
+          </label>
+          <span class="form-message"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="password">
+            <input
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Password"
+                type="password"
+            />
+          </label>
+          <span class="form-message"></span>
+          <!--5 < length < 15, at least 1 cap 1 num, no special-->
+        </div>
+
+        <button class="submit-btn" type="submit">SIGN IN</button>
+        <div class="form-group">
+          <p class="sign-up-option">
+            Don't have an account? <a href="/user/sign-up">Sign Up</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="/scripts/Validator.js"></script>
+<script>
+  Validator({
+    form: "#sign-in-form",
+    formGroupSelectors: ".form-group",
+    errorSelector: ".form-message",
+    rules: [
+      Validator.isRequired("#email"),
+      Validator.isRequired("#password"),
+    ],
+    onSubmit: undefined,
+    // function(data) {
+    //   console.log(data);
+    // }
+  })
+</script>

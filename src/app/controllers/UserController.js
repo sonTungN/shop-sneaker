@@ -11,12 +11,19 @@ class UserController {
   }
 
   async store(req, res, next) {
-    // res.json(req.body);
     const user = new User(req.body);
     await user
       .save()
-      .then(() => res.redirect("/home"))
+      .then(() => res.redirect("/"))
       .catch(next);
+  }
+
+  entry(req, res, next) {
+    res.render("sign-in", {
+      layout: "blank",
+      title: "Sign In",
+      styles: ["sign-in.css"],
+    });
   }
 }
 

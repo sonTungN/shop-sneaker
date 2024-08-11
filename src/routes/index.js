@@ -1,9 +1,9 @@
 const homeRouter = require("./home");
-const signUpRouter = require("./sign-up");
+const userRouter = require("./user");
 
 function route(app) {
-  app.use("/sign-up", signUpRouter);
-  
+  app.use("/user", userRouter);
+
   app.use("/", homeRouter);
 }
 

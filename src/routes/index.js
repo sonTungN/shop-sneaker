@@ -2,9 +2,9 @@ const homeRouter = require("./home");
 const signUpRouter = require("./sign-up");
 
 function route(app) {
-  app.use("/home", homeRouter);
-
   app.use("/sign-up", signUpRouter);
+  
+  app.use("/", homeRouter);
 }
 
 module.exports = route;

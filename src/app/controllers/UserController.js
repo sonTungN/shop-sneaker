@@ -14,13 +14,10 @@ class UserController {
   async store(req, res, next) {
     try {
       const isExisted = await User.findOne({ email: req.params.email });
-      console.log(isExisted);
       if (isExisted) {
-        return (
-          res
-            // .status(400)
-            .send("Email already exists. Please use a different email.")
-        );
+        return res
+          .status(400)
+          .json({ message: "Email already exists. Please try again!" });
       }
 
       const user = new User(req.body);
@@ -31,14 +28,6 @@ class UserController {
     } catch (err) {
       next(err);
     }
-
-    // const user = new User(req.body);
-    // User.find({ email: req.body.email });
-    //
-    // await user
-    //   .save()
-    //   .then(() => res.redirect("/"))
-    //   .catch(next);
   }
 
   // [GET] /user/sign-in

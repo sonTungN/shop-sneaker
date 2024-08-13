@@ -1,5 +1,6 @@
 const User = require("../model/User");
-const helper = require("../../utils/helper");
+const { mongooseToObject } = require("../../utils/mongoose");
+const { hashPassword, comparePassword } = require("../../utils/helper");
 
 class UserController {
   // [GET] /user/sign-up
@@ -23,11 +24,11 @@ class UserController {
 
       const user = new User({
         ...req.body,
-        password: helper.hashPassword(req.body.password),
+        password: hashPassword(req.body.password),
       });
       await user
         .save()
-        .then((user) => res.redirect("/"))
+        .then((user) => res.redirect("/user/sign-in"))
         .catch(next);
     } catch (err) {
       next(err);
@@ -41,6 +42,40 @@ class UserController {
       title: "Sign In",
       styles: ["sign-in.css"],
     });
+  }
+
+  // [POST] /user/:email/auth
+  async auth(req, res, next) {
+    try {
+      const matchedUser = await User.findOne({ email: req.params.email });
+      if (!matchedUser) {
+        return res.json({ message: "User Not Found..." });
+      }
+
+      const matchedUserObj = mongooseToObject(matchedUser);
+      const storedPassword = matchedUserObj.password;
+      if (!comparePassword(req.body.password, storedPassword)) {
+        return res.json({
+          message: "Passwords don't match. Authentication failed!",
+        });
+      }
+
+      req.session.regenerate(function (err) {
+        if (err) next(err);
+
+        req.session.user = {
+          id: matchedUserObj._id,
+          email: matchedUserObj.email,
+        };
+        res.json({ sessionID: req.session.id, session: req.session });
+      });
+    } catch (err) {
+      next(err);
+    }
+  }
+
+  status(req, res, next) {
+    res.json({ sessionID: req.session.id, session: req.session });
   }
 }
 

@@ -124,9 +124,9 @@
     errorSelector: ".form-message",
     rules: [
       Validator.isRequired("#name", "Please fill in your full name!"),
-      // Validator.isEmail("#email"),
+      Validator.isEmail("#email"),
       Validator.isRequired("#password"),
-      // Validator.minLength("#password", 6),
+      Validator.minLength("#password", 6),
       Validator.isRequired("#password-confirmation"),
       Validator.isConfirmed(
           "#password-confirmation",

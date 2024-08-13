@@ -77,6 +77,23 @@ class UserController {
   status(req, res, next) {
     res.json({ sessionID: req.session.id, session: req.session });
   }
+
+  quit(req, res, next) {
+    req.session.user = null;
+    req.session.save(function (err) {
+      if (err) next(err);
+
+      // req.session.regenerate(function (err) {
+      //   if (err) next(err);
+      //   res.redirect("/");
+      // });
+
+      req.session.destroy(function (err) {
+        if (err) next(err);
+        res.redirect("/");
+      });
+    });
+  }
 }
 
 module.exports = new UserController();

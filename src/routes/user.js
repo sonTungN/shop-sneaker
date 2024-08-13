@@ -11,4 +11,6 @@ router.post("/:email/auth", userController.auth);
 
 router.get("/:email/auth/status", userController.status);
 
+router.get("/logout", userController.quit);
+
 module.exports = router;

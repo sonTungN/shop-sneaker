@@ -34,8 +34,13 @@
       </ul>
 
       <div class="actions">
-        <a class="action-link" href="/user/sign-in">Sign in</a>
-        <a class="btn" href="/user/sign-up">Sign up</a>
+        {{#if user}}
+          <span>Welcome, {{user.email}}</span>
+          <a class="btn" href="/user/logout">Log out</a>
+        {{else}}
+          <a class="action-link" href="/user/sign-in">Sign in</a>
+          <a class="btn" href="/user/sign-up">Sign up</a>
+        {{/if}}
       </div>
     </nav>
   </div>

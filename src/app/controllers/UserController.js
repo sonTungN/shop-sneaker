@@ -67,7 +67,7 @@ class UserController {
           id: matchedUserObj._id,
           email: matchedUserObj.email,
         };
-        res.json({ sessionID: req.session.id, session: req.session });
+        res.redirect("/dashboard");
       });
     } catch (err) {
       next(err);

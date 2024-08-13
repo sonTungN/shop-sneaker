@@ -7,7 +7,7 @@ const port = 3000;
 
 const route = require("./routes/index");
 const db = require("./config/db");
-const session = require("./sessions/index");
+const session = require("./config/sessions/index");
 
 // STATIC FILES
 app.use(express.static(path.join(__dirname, "public")));

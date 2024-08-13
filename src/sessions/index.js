@@ -2,7 +2,7 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const mongoose = require("mongoose");
 
-function init(app) {
+function config(app) {
   app.use(
     session({
       secret: "Tung Nguyen",
@@ -18,4 +18,4 @@ function init(app) {
   );
 }
 
-module.exports = { init };
+module.exports = { config };

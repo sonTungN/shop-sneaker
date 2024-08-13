@@ -1,4 +1,5 @@
 const User = require("../model/User");
+const helper = require("../../utils/helper");
 
 class UserController {
   // [GET] /user/sign-up
@@ -20,7 +21,10 @@ class UserController {
           .json({ message: "Email already exists. Please try again!" });
       }
 
-      const user = new User(req.body);
+      const user = new User({
+        ...req.body,
+        password: helper.hashPassword(req.body.password),
+      });
       await user
         .save()
         .then((user) => res.redirect("/"))

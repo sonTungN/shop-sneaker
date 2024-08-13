@@ -19,6 +19,7 @@
   "homepage": "https://github.com/sonTungN/shop-sneaker#readme",
   "description": "",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "express": "^4.19.2",
     "express-handlebars": "^8.0.1",
     "mongoose": "^8.5.2",

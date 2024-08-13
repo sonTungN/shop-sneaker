@@ -7,6 +7,7 @@ const port = 3000;
 
 const route = require("./routes/index");
 const db = require("./config/db");
+const session = require("./config/sessions/index");
 
 // STATIC FILES
 app.use(express.static(path.join(__dirname, "public")));
@@ -23,6 +24,9 @@ db.connect();
 app.engine(".hbs", engine({ extname: ".hbs" }));
 app.set("view engine", ".hbs");
 app.set("views", path.join(__dirname, "/resources/views"));
+
+// SET UP SESSION
+session.config(app);
 
 // APP ROUTER from src/routes
 route(app);

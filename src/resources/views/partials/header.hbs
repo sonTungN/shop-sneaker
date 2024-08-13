@@ -35,7 +35,7 @@
 
       <div class="actions">
         {{#if user}}
-          <span>Welcome, {{user.email}}</span>
+          <span class="action-link">Welcome, {{user.email}}</span>
           <a class="btn" href="/user/logout">Log out</a>
         {{else}}
           <a class="action-link" href="/user/sign-in">Sign in</a>

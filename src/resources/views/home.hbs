@@ -108,357 +108,49 @@
     </header>
 
     <div class="item-list">
-      <!-- Item 1-->
-      <div class="item">
-        <img alt="Adidas Trea" class="thumb" src="/assets/img/sneaker1.png"/>
-        <div class="body">
-          <p class="desc">1 color</p>
-          <h3 class="title line-clamp">
-            <a href="#!">ADIDAS TREA UNLIMITED WHITE</a>
-          </h3>
-          <p class="desc price">1,800,000 VND</p>
+      {{#each shoes}}
+        <div class="item">
+          <img alt="Adidas Trea" class="thumb" src="/assets/img/sneaker{{this.imageId}}.png"/>
+          <div class="body">
+            <h3 class="title line-clamp">
+              <a href="#!">{{this.name}}</a>
+            </h3>
+            <p class="desc price">{{this.price}} VND</p>
 
-          <div class="rating">
-            <div class="stars">
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
+            <div class="rating">
+              <div class="stars">
+                <img
+                    alt="Rating Star"
+                    class="star"
+                    src="assets/icon/rating-star.svg"
+                />
+                <img
+                    alt="Rating Star"
+                    class="star"
+                    src="assets/icon/rating-star.svg"
+                />
+                <img
+                    alt="Rating Star"
+                    class="star"
+                    src="assets/icon/rating-star.svg"
+                />
+                <img
+                    alt="Rating Star"
+                    class="star"
+                    src="assets/icon/rating-star.svg"
+                />
+                <img
+                    alt="Rating Star"
+                    class="star"
+                    src="assets/icon/rating-star.svg"
+                />
+              </div>
+              <p class="desc">({{this.stars}})</p>
             </div>
-            <p class="desc">(153)</p>
+            <div class="btn product-cta">ADD TO CART</div>
           </div>
-          <div class="btn product-cta">ADD TO CART</div>
         </div>
-      </div>
-
-      <!-- Item 2-->
-      <div class="item">
-        <img alt="Adidas Trea" class="thumb" src="/assets/img/sneaker2.png"/>
-        <div class="body">
-          <p class="desc">1 color</p>
-          <h3 class="title line-clamp">
-            <a href="#!">ADIDAS TRAE YOUNG 1 96 OLYMPICS</a>
-          </h3>
-          <p class="desc price">2,350,000 VND</p>
-
-          <div class="rating">
-            <div class="stars">
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-            </div>
-            <p class="desc">(93)</p>
-          </div>
-          <div class="btn product-cta">ADD TO CART</div>
-        </div>
-      </div>
-
-      <!--Item 3 -->
-      <div class="item">
-        <img alt="Nike KD" class="thumb" src="/assets/img/sneaker3.png"/>
-        <div class="body">
-          <p class="desc">1 color</p>
-          <h3 class="title line-clamp">
-            <a href="#!">NIKE KD 16 READY PLAY</a>
-          </h3>
-          <p class="desc price">3,400,000 VND</p>
-
-          <div class="rating">
-            <div class="stars">
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-            </div>
-            <p class="desc">(90)</p>
-          </div>
-          <div class="btn product-cta">ADD TO CART</div>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="item">
-        <img alt="Nike Freak" class="thumb" src="/assets/img/sneaker4.png"/>
-        <div class="body">
-          <p class="desc">1 color</p>
-          <h3 class="title line-clamp">
-            <a href="#!">NIKE FREAK IMMOTALITY BLACK UNIVERSITY RED</a>
-          </h3>
-          <p class="desc price">2,200,000 VND</p>
-
-          <div class="rating">
-            <div class="stars">
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-            </div>
-            <p class="desc">(210)</p>
-          </div>
-          <div class="btn product-cta">ADD TO CART</div>
-        </div>
-      </div>
-
-      <!--Item 5 -->
-      <div class="item">
-        <img alt="Jordan Zion" class="thumb" src="/assets/img/sneaker5.png"/>
-        <div class="body">
-          <p class="desc">1 color</p>
-          <h3 class="title line-clamp">
-            <a href="#!">JORDAN ZION 3 MUD, SWEAT AND TEARS</a>
-          </h3>
-          <p class="desc price">3,600,000 VND</p>
-
-          <div class="rating">
-            <div class="stars">
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-            </div>
-            <p class="desc">(53)</p>
-          </div>
-          <div class="btn product-cta">ADD TO CART</div>
-        </div>
-      </div>
-
-      <!-- Item 6 -->
-      <div class="item">
-        <img alt="Nike Lebron" class="thumb" src="/assets/img/sneaker6.png"/>
-        <div class="body">
-          <p class="desc">1 color</p>
-          <h3 class="title line-clamp">
-            <a href="#!">NIKE LEBRON WITNESS 8 WHITE LIGHT SMOKE GREY</a>
-          </h3>
-          <p class="desc price">2,500,000 VND</p>
-
-          <div class="rating">
-            <div class="stars">
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-            </div>
-            <p class="desc">(121)</p>
-          </div>
-          <div class="btn product-cta">ADD TO CART</div>
-        </div>
-      </div>
-
-      <!-- Item 7 -->
-      <div class="item">
-        <img alt="Wade" class="thumb" src="/assets/img/sneaker7.png"/>
-        <div class="body">
-          <p class="desc">1 color</p>
-          <h3 class="title line-clamp">
-            <a href="#!">WADE SHADOW 5 BUZZER BEATER</a>
-          </h3>
-          <p class="desc price">2,400,000 VND</p>
-
-          <div class="rating">
-            <div class="stars">
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-            </div>
-            <p class="desc">(120)</p>
-          </div>
-          <div class="btn product-cta">ADD TO CART</div>
-        </div>
-      </div>
-
-      <!-- Item 8 -->
-      <div class="item">
-        <img alt="UA Anatomix" class="thumb" src="/assets/img/sneaker4.png"/>
-        <div class="body">
-          <p class="desc">1 color</p>
-          <h3 class="title line-clamp">
-            <a href="#!">UA ANATOMIX SPAWN 5 PINK BLACK</a>
-          </h3>
-          <p class="desc price">1,800,000 VND</p>
-
-          <div class="rating">
-            <div class="stars">
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-              <img
-                  alt="Rating Star"
-                  class="star"
-                  src="assets/icon/rating-star.svg"
-              />
-            </div>
-            <p class="desc">(46)</p>
-          </div>
-          <div class="btn product-cta">ADD TO CART</div>
-        </div>
-      </div>
+      {{/each}}
     </div>
 
     <a class="link" href="#!">

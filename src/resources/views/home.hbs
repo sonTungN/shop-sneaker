@@ -147,7 +147,10 @@
               </div>
               <p class="desc">({{this.stars}})</p>
             </div>
-            <div class="btn product-cta">ADD TO CART</div>
+
+            <form action="/me/{{this.imageId}}/add" method="POST">
+              <button type="submit" class="btn product-cta">ADD TO CART</button>
+            </form>
           </div>
         </div>
       {{/each}}

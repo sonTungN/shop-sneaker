@@ -17,6 +17,10 @@ class MeController {
       )
       .catch(next);
   }
+
+  display(req, res, next) {
+    res.send("Go to cart");
+  }
 }
 
 module.exports = new MeController();

@@ -5,7 +5,7 @@ const meRouter = require("./me");
 function route(app) {
   app.use("/user", userRouter);
 
-  app.use("/dashboard", meRouter);
+  app.use("/me", meRouter);
 
   app.use("/", homeRouter);
 }

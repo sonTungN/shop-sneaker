@@ -28,17 +28,6 @@
 .header .nav-bar .list .cart {
   position: relative;
 }
-.header .nav-bar .list .cart-qty {
-  display: inline-block;
-  position: absolute;
-  top: 4px;
-  left: 90px;
-  padding: 3px 5px;
-  border-radius: 3px;
-  background-color: rgba(0, 3, 54, 0.2);
-  font-size: 1.6rem;
-  font-weight: 500;
-}
 .header .action-link {
   margin-right: 10px;
   font-weight: 500;
@@ -53,4 +42,4 @@
   border-bottom: 1px solid black;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/header.scss%22,%22../../resources/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AACA;EACE,kBCJc;;ADMd;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAEA;EACE;EACA;EACA,OCrBQ;EDsBR;;AAEA;EACE;;AAIJ;EACE;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAKN;EACE;EACA;EACA;EACA,OCnDY;;;ADuDhB;EACE;EACA;EACA;EACA%22,%22file%22:%22header.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../resources/scss/header.scss%22,%22../../resources/scss/_variables.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;AACA;EACE,kBCJc;;ADMd;EACE;EACA;EACA;EACA;;AAEA;EACE;EACA;;AAGF;EACE;EACA;;AAEA;EACE;EACA;EACA,OCrBQ;EDsBR;;AAEA;EACE;;AAIJ;EACE;;AAKN;EACE;EACA;EACA;EACA,OCvCY;;;AD2ChB;EACE;EACA;EACA;EACA%22,%22file%22:%22header.css%22%7D */

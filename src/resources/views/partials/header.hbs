@@ -17,7 +17,11 @@
 
       <ul class="list">
         <li>
-          <a href="#">HOME</a>
+          {{#if user}}
+            <a href="/me">HOME</a>
+          {{else}}
+            <a href="/">HOME</a>
+          {{/if}}
         </li>
         <li>
           <a href="#!">ABOUT US</a>

@@ -25,6 +25,7 @@ class UserController {
       const user = new User({
         ...req.body,
         password: hashPassword(req.body.password),
+        cart: [],
       });
       await user
         .save()
@@ -74,6 +75,7 @@ class UserController {
     }
   }
 
+  // [GET] /user/:email/status
   status(req, res, next) {
     res.json({ sessionID: req.session.id, session: req.session });
   }

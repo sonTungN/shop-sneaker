@@ -19,7 +19,11 @@ class MeController {
   }
 
   display(req, res, next) {
-    res.send("Go to cart");
+    res.render("me/my-cart", {
+      user: req.session.user,
+      title: "My Cart",
+      styles: ["cart.css", "header.css", "footer.css"],
+    });
   }
 }
 

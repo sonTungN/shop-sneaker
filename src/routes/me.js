@@ -6,6 +6,6 @@ const meController = require("../app/controllers/MeController");
 
 router.get("/cart", checkUserSession, meController.display);
 
-router.get("/dashboard", meController.show);
+router.get("/", meController.show);
 
 module.exports = router;

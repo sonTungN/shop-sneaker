@@ -67,7 +67,7 @@ class UserController {
           id: matchedUserObj._id,
           email: matchedUserObj.email,
         };
-        res.redirect("/me/dashboard");
+        res.redirect("/me");
       });
     } catch (err) {
       next(err);

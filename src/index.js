@@ -2,12 +2,16 @@ const path = require("path");
 
 const express = require("express");
 const { engine } = require("express-handlebars");
+const methodOverride = require("method-override");
 const app = express();
 const port = 3000;
 
 const route = require("./routes/index");
 const db = require("./config/db");
 const session = require("./config/sessions/index");
+
+// METHOD OVERRIDE
+app.use(methodOverride("_method"));
 
 // STATIC FILES
 app.use(express.static(path.join(__dirname, "public")));

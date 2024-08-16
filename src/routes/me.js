@@ -4,6 +4,8 @@ const checkUserSession = require("../utils/session");
 
 const meController = require("../app/controllers/MeController");
 
+router.post("/cart/:id/delete", meController.delete);
+
 router.get("/cart", checkUserSession, meController.display);
 
 router.post("/:id/add", checkUserSession, meController.add);

@@ -10,9 +10,6 @@
       <!-- Item 1 -->
       {{#each shoes}}
         <div class="cart-item">
-          <!--<label>-->
-          <!--  <input class="checkbox" name="input" type="checkbox"/>-->
-          <!--</label>-->
           <img
               alt="Item Thumb"
               class="thumb"
@@ -22,10 +19,12 @@
           <div class="item-price">{{this.price}} VND</div>
           <div class="qty">{{this.quantity}}</div>
           <img
+              data-id="{{this.imageId}}"
               alt="Delete Icon"
               class="delete"
               src="/assets/icon/delete-icon.svg"
           />
+          <form method="POST" class="delete-form"></form>
         </div>
       {{/each}}
     </div>
@@ -40,3 +39,19 @@
     {{/if}}
   </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const forms = document.querySelectorAll(".delete-form"); // Select all forms
+    const deleteButtons = document.querySelectorAll(".delete"); // Select all delete buttons
+
+    deleteButtons.forEach((btn, index) => {
+      btn.addEventListener("click", function (e) {
+        const imageId = e.target.getAttribute("data-id");
+        const form = forms[index];
+        form.action = `/me/cart/${imageId}/delete`;
+        form.submit();
+      });
+    });
+  });
+</script>

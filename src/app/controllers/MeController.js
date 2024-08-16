@@ -73,6 +73,42 @@ class MeController {
       styles: ["cart.css", "header.css", "footer.css"],
     });
   }
+
+  // [POST] /me/cart/:id/delete
+  async delete(req, res, next) {
+    try {
+      const currUser = await User.findOne({ _id: req.session.user.id });
+      const allShoes = multipleMongooseToObject(await Shoes.find({}));
+
+      currUser.cart = currUser.cart.filter(
+        (item) => item.imageId !== req.params.id,
+      );
+
+      const cartItems = currUser.cart.map((cartItem) => {
+        const matchedShoes = allShoes.find(
+          (shoes) => String(shoes.imageId) === String(cartItem.imageId),
+        );
+        return {
+          ...matchedShoes,
+          quantity: cartItem.quantity,
+        };
+      });
+
+      await currUser
+        .save()
+        .then(() => {
+          res.render("me/my-cart", {
+            user: req.session.user,
+            shoes: cartItems,
+            title: "My Cart",
+            styles: ["cart.css", "header.css", "footer.css"],
+          });
+        })
+        .catch(next);
+    } catch (err) {
+      next(err);
+    }
+  }
 }
 
 module.exports = new MeController();

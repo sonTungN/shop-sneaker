@@ -26,8 +26,14 @@
         <li>
           <a href="#!">ABOUT US</a>
         </li>
+
         <li>
-          <a href="#products">PRODUCTS</a>
+          {{#if user}}
+            <a href="/me#products">PRODUCTS</a>
+          {{else}}
+            <a href="/#products">PRODUCTS</a>
+          {{/if}}
+
         </li>
         <li>
           <a class="cart" href="/me/cart">

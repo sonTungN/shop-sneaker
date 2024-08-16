@@ -75,7 +75,7 @@ class UserController {
     }
   }
 
-  // [GET] /user/:email/status
+  // [GET] /user/:email/auth/status
   status(req, res, next) {
     res.json({ sessionID: req.session.id, session: req.session });
   }
